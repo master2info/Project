@@ -1,0 +1,187 @@
+
+.table th
+{font-size:12px;}
+
+.table td
+{padding: 8px 5px;line-height:14px}
+
+
+	
+.table-striped tbody > tr:nth-child(odd) > td
+{
+	background:none;
+}
+
+.table_waste {
+  max-width: none;
+}
+	
+header
+{
+	border-bottom:solid 6px #478874;
+	padding: 0px 0 0 0 ;
+	margin: 0 0 20px 0;
+	/*background-color:rgba(255,255,255,0.8);*/
+	background-image: url(opacity.png);
+	font-family: 'comfortaaregular';
+}
+
+.header
+{
+	border-bottom:solid 6px #478874;
+	padding: 0px 0 0 0 ;
+	margin: 0 0 20px 0;
+	/*background-color:rgba(255,255,255,0.8);*/
+	background-image: url(opacity.png);
+	font-family: 'comfortaaregular';
+}
+
+.nav .pull-right li{line-height: 40px;}
+.nav .pull-right .divider-vertical{height: 60px;}
+
+.tooltip > p {text-align:left!important}
+.Blackbox
+{
+	/*background-color:rgba(51,51,51,0.4);*/
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(51,51,51,0.2) 0%, rgba(51,51,51,0.6) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0.2)), color-stop(100%,rgba(51,51,51,0.6))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(51,51,51,0.2) 0%,rgba(51,51,51,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(51,51,51,0.2) 0%,rgba(51,51,51,0.6) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(51,51,51,0.2) 0%,rgba(51,51,51,0.6) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(51,51,51,0.2) 0%,rgba(51,51,51,0.6) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000044', endColorstr='#00000066',GradientType=0 ); /* IE6-9 */
+	padding:0px 0 10px 0;
+	float:none;
+	margin:0 auto;
+	border: solid 1px rgba(0,0,0,0.25);
+}
+
+.Blackbox.BlackboxDark
+{
+	/*background-color:rgba(51,51,51,0.4);*/
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(25,25,25,0.2) 0%, rgba(25,25,25,0.6) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(25,25,25,0.2)), color-stop(100%,rgba(25,25,25,0.6))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(25,25,25,0.2) 0%,rgba(25,25,25,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(25,25,25,0.2) 0%,rgba(25,25,25,0.6) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(25,25,25,0.2) 0%,rgba(25,25,25,0.6) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(25,25,25,0.2) 0%,rgba(25,25,25,0.6) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000044', endColorstr='#00000066',GradientType=0 ); /* IE6-9 */
+	padding:0px 0 10px 0;
+	float:none;
+	margin:0 auto;
+	border: solid 1px rgba(0,0,0,0.25);
+}
+
+.navbar .nav > li > a {
+ 	text-shadow: 0 0px 3px #000;
+	color:white;
+	text-transform:capitalize;
+}
+.navbar .nav > li > a:hover {
+ 	text-shadow: 0 0px 5px #000;
+	color:#DDD;
+}
+
+.navbar .divider-vertical {
+height: 40px;
+margin: 0 9px;
+ border-left: 0px solid #f2f2f2;
+border-right: 1px dotted rgba(51,51,51,0.7);
+}
+
+.form-horizontal .control-label {
+color: #DDD;
+text-shadow: 0 0px 5px #000;
+}
+.submit {text-align: center;}
+
+
+#MAGIES img {
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */   
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); /* IE6 & 7 */      
+    zoom: 1;
+
+}
+
+h2 span
+{
+	clear:both;font-size:12px;
+}
+
+header h2{margin: 0px 0px 10px 0px;display:block;}
+
+label{
+width:180px;
+float:left;
+}
+
+form{margin-bottom:5px;}
+
+hr{
+margin: 10px 0 10px 0;
+border-top: 1px solid #444;
+border-bottom: 1px solid #666;
+}
+
+.icon-red_remove{color:#990000;}
+
+.table_tr_span
+{
+	width:120px;
+	float:left;
+}
+
+.form-horizontal .control-group {margin-bottom:3px;}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: circle;
+    margin: 0 0 18px 20px;
+  }
+}
+
+
+.table_th{background-color:#b7f3d5!important;}
+
+.table {
+ display: table;
+ height:100%;
+}
+.table-cell {
+display: table-cell;
+vertical-align: middle;
+}
+
+.tableIngredient a, .tableIngredient a:hover
+{
+	text-decoration:none;
+}
+.tableIngredient a:hover
+{
+	color:#000;
+}
+
+.table .waste_categories td{padding:3px 0;text-align:center;}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}

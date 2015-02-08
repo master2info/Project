@@ -1,0 +1,129 @@
+<!--<p id="notice"><%= notice %></p>
+
+<h1>Listing Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>First name</th>
+      <th>Archived</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.name %></td>
+        <td><%= patient.first_name %></td>
+        <td><%= patient.archived %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Patient', new_patient_path %>-->
+
+<div style="margin:0 10px 0 10px;">
+<h3 style="margin:0;">Liste des patients</h3>
+</div>
+<!--<div class="row">-->
+
+
+<div class="span12"> 
+<div style="margin:0 10px 10px 10px;">
+<%#= render 'shared/title_proc', :title => "", :tabs => 'material' %>
+<div class="tab-content">
+  <div class="tab-pane active" id="material_data">
+<table class="table table-hover">
+  <tbody>
+ <thead >   
+  <tr>
+	<th></th>
+    <th class="table_th" style="text-align:center;" > Nom </th>  
+    <th class="table_th" style="text-align:center;" >Prénom </th>
+    <th class="table_th" style="text-align:center;" >Archivé</th>    
+  </tr>
+ </thead>
+ 
+  <% for mat in @patients.sort_by(&:name).reverse %>
+   <tr> 
+      <td style="text-align:center;">
+      	
+      	<%=link_to (fa_icon "edit"),"#myModal_edit_#{mat.id}", :data => {:toggle => "modal"},:rel => 'tooltip',:title => 'Modifier' %>
+      	
+	  </td>
+  
+	<%= render 'modal_edit_patient', :ing => mat %>
+  
+      <td style="text-align:center;"> <%= mat.name %></td>
+      <td style="text-align:center;"><%= mat.first_name%></td>
+       <%if mat.archived == true %>
+            <td style="text-align:center;">Oui</td>        
+         <%else%>
+           <td style="text-align:center;">Non</td>  
+         <%end%>
+      
+	     
+  </tr>
+	<% end %>
+		<tr>
+			<td ><a href="#myModal" role="button" class="btn btn-block btn-info btn-mini" data-toggle="modal"><%= fa_icon "plus" %> ajouter</a>
+                      
+                         <%= render 'modal_add_patient' %>
+                     </td>   
+		</tr>
+                <% unless @patients.count == 0%>
+                <tr>
+		<td ><a href="#myModal_up" role="button" class="btn btn-block btn-info btn-mini" data-toggle="modal">Afficher all</a>
+                   <%= render 'modal_up_patient' %>
+                     </td>   
+		</tr>
+              <%end%>
+
+  </tbody>  
+</table>
+ 
+   </div>
+</div>
+</div>
+</div>
+<!--</div>-->
+
+
+
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="row">
+<div class="span5">
+  <div style="margin: 0 100px 100px 100px;">
+	  <%#= render 'shared/graph_pie', :qty => 100  %>
+  </div>  
+</div>
+</div>-->
