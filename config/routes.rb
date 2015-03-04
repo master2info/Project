@@ -7,6 +7,7 @@ Rails.application.routes.draw do
          post 'add_patient'
          post 'edit_patient'
          post 'up_patient'
+         get 'delete'
      end
      end
 

@@ -11,26 +11,6 @@ class PatientsController < ApplicationController
     end
   end
 
-  # GET /patients/1
-  # GET /patients/1.json
-  def show
-  end
-
-  # GET /patients/new
-  def new
-    
-     @patient = Patient.new(patient_params)
-
-    respond_to do |format|
-      if @patient.savae
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
-        format.json { render :show, status: :created, location: @patient }
-      else
-        format.html { render :new }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
-      end
-    end
-  end
   
   def up_patient
   #@patient = Patient.all
@@ -38,9 +18,11 @@ class PatientsController < ApplicationController
         
        logger.info("########################table for id is ======== #{params[:archive].keys}")
     for index in params[:archive].keys do 
-       logger.info("########################table for id is ======== #{@patient.to_json}")
+       logger.info("########################patient is ======== #{@patient.to_json}")
+       logger.info("########################!!!!!! INDEX IS  ======== #{index.to_i} and !!! #{params[:archive].keys[index.to_i - 1].to_i }")
       #@patient.select{|b| b.id == params[:archived].keys[index.to_i-1]}.map{|p| p.archived}[0]= true
-      @patient = Patient.where(:id => params[:archive].keys[index.to_i - 1].to_i).first
+      #@patient = Patient.where(:id => params[:archive].keys[index.to_i - 1].to_i).first
+      @patient = Patient.where(:id => index.to_i ).first
      @patient.archived = true
        @patient.save!
     end
@@ -71,6 +53,12 @@ class PatientsController < ApplicationController
     redirect_to :action => 'index', notice: 'Patient was successfully created.'
   end
   
+  def delete
+     #@patient = Patient.find(:id => params[:id].to_i)
+    Patient.destroy_all(:id => params[:p].to_i)
+    redirect_to :action => 'index', notice: 'Patient was successfully deleted.'
+  end
+  
   def edit_patient
     @patient = Patient.where(:id => params[:patient][:id]).first
     @patient.name = params[:patient][:name]
@@ -91,12 +79,7 @@ class PatientsController < ApplicationController
   end
  
 
-  # GET /patients/1/edit
-  def edit
-  end
-
-  # POST /patients
-  # POST /patients.json
+  
   def create
     @patient = Patient.new(patient_params)
 
@@ -128,6 +111,7 @@ class PatientsController < ApplicationController
   # DELETE /patients/1
   # DELETE /patients/1.json
   def destroy
+     @patient = Patient.find(params[:id])
     @patient.destroy
     respond_to do |format|
       format.html { redirect_to patients_url, notice: 'Patient was successfully destroyed.' }
